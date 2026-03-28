@@ -5,7 +5,7 @@ const projetos = [
         descCurta: "Sistema de Back-End robusto para processamento linguístico.",
         descLonga: "Desenvolvido como TCC, este projeto foca em processamento de linguagem natural (NLP). Utiliza Python e Flask para análise gramatical complexa com persistência em FirebaseSQL.",
         tags: ["PYTHON", "FLASK", "NLP", "FIREBASE"],
-        imagem: "img/tcc.jpg",
+        imagem: "assets/img/tcc.jpg",
         github: "https://github.com/gabrielcamargogsilva/GramatXplorer---TCC",
         demo: "#"
     },
@@ -30,7 +30,7 @@ const projetos = [
         descCurta: "Aplicação Fullstack para gestão de treinos.",
         descLonga: "Sistema que separa a lógica de interface em React da inteligência de dados no Back-end, permitindo uma gestão de treinos eficiente e escalável.",
         tags: ["REACT", "NODE.JS", "API REST"],
-        imagem: "img/treinai.png",
+        imagem: "assets/img/treinai.png",
         links: [
             { label: "GitHub Front", url: "https://github.com/gabrielcamargogsilva/Consultor-de-treino---Front-End", tipo: "github" },
             { label: "GitHub API", url: "https://github.com/gabrielcamargogsilva/Consultor-de-treino---Back-End.git", tipo: "github" },
@@ -43,7 +43,7 @@ const projetos = [
         descCurta: "API REST própria com interface de consumo.",
         descLonga: "Projeto focado na criação de uma API de entretenimento e na implementação de um Front-end moderno para consumir esses dados de forma assíncrona.",
         tags: ["API", "JAVASCRIPT", "BACKEND"],
-        imagem: "img/charada.png",
+        imagem: "assets/img/charada.png",
         links: [
             { label: "GitHub API", url: "https://github.com/gabrielcamargogsilva/ProjetoAPI_Charada", tipo: "github" },
             { label: "GitHub Front", url: "https://github.com/gabrielcamargogsilva/Front-end-Charada", tipo: "github" },
@@ -56,11 +56,24 @@ const projetos = [
         descCurta: "Consulta de preços de veículos em tempo real.",
         descLonga: "Consome uma API externa oficial para fornecer dados atualizados sobre o mercado automóvel brasileiro de forma intuitiva.",
         tags: ["REACT", "TAILWIND", "API"],
-        imagem: "img/fipe.png",
+        imagem: "assets/img/fipe.png",
         github: "https://github.com/gabrielcamargogsilva/Projeto-API-Tabela-FIPE",
         links: [
             { label: "GitHub ", url: "https://github.com/gabrielcamargogsilva/Projeto-API-Tabela-FIPE", tipo: "github" },
             { label: "Ver", url: "https://projeto-api-tabela-fipe.vercel.app/", tipo: "demo" }
+        ]
+    },
+    {
+        id: 6,
+        titulo: "Front-end Netflix Clone",
+        descCurta: "Clone da interface da Netflix com Html, CSS e JavaScript.",
+        descLonga: "Projeto de front-end que replica a interface da Netflix utilizando apenas HTML, CSS e JavaScript, focando na responsividade e interatividade. Fins de uma imersão para aprimorar habilidades de design e desenvolvimento web.",
+        tags: ["HTML", "CSS", "JAVASCRIPT"],
+        imagem: "assets/img/front-end-netflix.png",
+        github: "https://github.com/gabrielcamargogsilva/netflix",
+        links: [
+            { label: "GitHub ", url: "https://github.com/gabrielcamargogsilva/netflix", tipo: "github" },
+            { label: "Ver", url: "https://netflix-xi-plum.vercel.app/", tipo: "demo" }
         ]
     }
 ];
@@ -131,5 +144,3 @@ window.onclick = function(event) { if (event.target == modal) fecharModal(); }
 document.addEventListener('DOMContentLoaded', renderizarProjetos);
 
 
-// Inicializa os ícones do Lucide
-lucide.createIcons();
