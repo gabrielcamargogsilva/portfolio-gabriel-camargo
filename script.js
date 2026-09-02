@@ -16,7 +16,6 @@ const projetos = [
         descLonga: "Um ecossistema completo para academias. A parte Admin permite o registro de alunos e gestão, enquanto a parte Cliente foca na experiência do usuário e consulta de dados.",
         tags: ["NODE.JS", "REACT", "FULLSTACK"],
         imagem: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800",
-        // Links múltiplos para este projeto
         links: [
             { label: "GitHub Admin", url: "https://github.com/gabrielcamargogsilva/Projeto-Academia-Admin", tipo: "github" },
             { label: "GitHub Cliente", url: "https://github.com/gabrielcamargogsilva/Projeto-Academia-Cliente.git", tipo: "github" },
@@ -75,6 +74,17 @@ const projetos = [
             { label: "GitHub ", url: "https://github.com/gabrielcamargogsilva/netflix", tipo: "github" },
             { label: "Ver", url: "https://netflix-xi-plum.vercel.app/", tipo: "demo" }
         ]
+    },
+    {
+        id: 7, 
+        titulo: "Assistente Financeiro Inteligente com IA",
+        descCurta: "Bot no Telegram integrado com IA e automação no Make para gestão financeira direto no Excel.",
+        descLonga: "Desenvolvimento de um bot financeiro privado no Telegram integrado a uma Inteligência Artificial para gestão automatizada de despesas e receitas. O fluxo recebe entradas em linguagem natural (ex: 'gastei 35 reais com energia'), utiliza IA para classificar a transação (Entrada, Gasto Fixo ou Variável) e converte os dados para JSON. Através de roteamento e filtros avançados no Make, a automação identifica o mês e a categoria, registra as informações automaticamente em uma tabela do Excel e retorna uma mensagem de confirmação no chat.",
+        tags: ["Make", "IA", "Telegram API", "Excel"],
+        imagem: "assets/img/fluxo-financeiro.png",
+        github: "",
+        links: [
+        ]
     }
 ];
 
@@ -123,12 +133,14 @@ function abrirModal(id) {
                 </a>
             `;
         });
-    } else {
-        // Fallback para projetos simples (Tabela FIPE, etc)
+    } else if (p.links === demo) {
         linksContainer.innerHTML = `
             <a href="${p.github}" target="_blank" class="flex-1 bg-white text-black text-center py-3 rounded-xl font-bold hover:bg-gray-200 transition-all text-sm uppercase">GitHub</a>
             ${p.demo !== "#" ? `<a href="${p.demo}" target="_blank" class="flex-1 bg-emerald-600 text-white text-center py-3 rounded-xl font-bold hover:bg-emerald-500 transition-all text-sm uppercase">Acessar Demo</a>` : ''}
         `;
+    }
+    else {
+        linksContainer.innerHTML = `<span class="text-gray-400 text-sm">Nenhum link disponível para este projeto.</span>`;
     }
 
     modal.classList.remove('hidden');
