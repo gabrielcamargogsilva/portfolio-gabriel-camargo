@@ -8,6 +8,19 @@ body {
     font-family: 'Inter', sans-serif; 
 }
 
+/* Mantem o conteudo do modal acessivel mesmo quando a descricao cresce. */
+#modal-projeto {
+    scrollbar-gutter: stable;
+}
+
+#modal-projeto > div {
+    min-height: 0;
+}
+
+#modal-projeto [id="modal-desc-longa"] {
+    overflow-wrap: anywhere;
+}
+
 /* Espaçamento para o conteúdo não subir para baixo do header */
 .scroll-mt-header {
     scroll-margin-top: 100px;
