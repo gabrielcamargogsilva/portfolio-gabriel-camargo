@@ -85,6 +85,19 @@ const projetos = [
         github: "",
         links: [
         ]
+    },
+    {
+        id: 8, // Lembre-se de ajustar para o número correto na sua lista
+        titulo: "Assistente de Finanças com CrewAI",
+        descCurta: "Plataforma de gestão financeira impulsionada por agentes autônomos de Inteligência Artificial.",
+        descLonga: "Um assistente financeiro inovador desenvolvido com arquitetura dividida. O core do projeto utiliza o framework CrewAI no Back-end com Python, orquestrando múltiplos agentes de Inteligência Artificial que atuam como especialistas para analisar dados, categorizar gastos e gerar insights financeiros personalizados. O Front-end consome essas inteligências, entregando uma interface amigável e interativa para o usuário final interagir com os agentes.",
+        tags: ["CrewAI", "Python", "Inteligência Artificial", "Front-end"],
+        imagem: "assets/img/assistente-financas.png",
+        links: [
+            { label: "GitHub (Back-end/IA)", url: "https://github.com/gabrielcamargogsilva/assistente-de-financas", tipo: "github" },
+            { label: "GitHub (Front-end)", url: "https://github.com/gabrielcamargogsilva/assistente-de-financas-front-end", tipo: "github" },
+            {label: "Ver Front-end", url: "https://assistente-de-financas-front-end.vercel.app/", tipo: "demo"}
+        ]
     }
 ];
 
