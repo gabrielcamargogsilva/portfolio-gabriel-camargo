@@ -13,8 +13,8 @@ const projetos = [
         id: 2,
         titulo: "Sistema Academia Fullstack",
         descCurta: "Gestão completa com interfaces Admin e Cliente.",
-        descLonga: "Um ecossistema completo para academias. A parte Admin permite o registro de alunos e gestão, enquanto a parte Cliente foca na experiência do usuário e consulta de dados.",
-        tags: ["NODE.JS", "REACT", "FULLSTACK"],
+        descLonga: "Um ecossistema completo para academias. A parte Admin permite o registro de alunos e gestão, enquanto a parte Cliente foca na imersão de uma catraca virtual, onde o usuário coloca seus dados e acontece a liberação do acesso",
+        tags: ["HTML", "TAILWIND", "API", "FLASK", "FULLSTACK"],
         imagem: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800",
         links: [
             { label: "GitHub Admin", url: "https://github.com/gabrielcamargogsilva/Projeto-Academia-Admin", tipo: "github" },
@@ -26,9 +26,9 @@ const projetos = [
     {
         id: 3,
         titulo: "Consultor de Treino",
-        descCurta: "Aplicação Fullstack para gestão de treinos.",
-        descLonga: "Sistema que separa a lógica de interface em React da inteligência de dados no Back-end, permitindo uma gestão de treinos eficiente e escalável.",
-        tags: ["REACT", "NODE.JS", "API REST"],
+        descCurta: "Aplicação Fullstack para criação de treino personalizados..",
+        descLonga: "Projeto com base na criação de treino personalizados, onde o usuário coloca suas especificações e a IA generativa gera o treino ideal",
+        tags: ["HTML", "TAILWIND", "API", "FLASK", "IA GENERATIVA"],
         imagem: "assets/img/treinai.png",
         links: [
             { label: "GitHub Front", url: "https://github.com/gabrielcamargogsilva/Consultor-de-treino---Front-End", tipo: "github" },
@@ -40,8 +40,8 @@ const projetos = [
         id: 4,
         titulo: "API & Front de Charadas",
         descCurta: "API REST própria com interface de consumo.",
-        descLonga: "Projeto focado na criação de uma API de entretenimento e na implementação de um Front-end moderno para consumir esses dados de forma assíncrona.",
-        tags: ["API", "JAVASCRIPT", "BACKEND"],
+        descLonga: "Projeto focado na criação de uma API de charadas e na implementação de um Front-end para consumir essa API de forma assíncrona",
+        tags: ["API", "JAVASCRIPT", "BACKEND", "FLASK"],
         imagem: "assets/img/charada.png",
         links: [
             { label: "GitHub API", url: "https://github.com/gabrielcamargogsilva/ProjetoAPI_Charada", tipo: "github" },
@@ -53,8 +53,8 @@ const projetos = [
         id: 5,
         titulo: "Consultor Tabela FIPE",
         descCurta: "Consulta de preços de veículos em tempo real.",
-        descLonga: "Consome uma API externa oficial para fornecer dados atualizados sobre o mercado automóvel brasileiro de forma intuitiva.",
-        tags: ["REACT", "TAILWIND", "API"],
+        descLonga: "consome uma API externa onde traz o valor do veículo com base na tabela FIPE atualizada de acordo com o ano e o modelo do veículo",
+        tags: ["HTML", "TAILWIND", "API", "FLASK"],
         imagem: "assets/img/fipe.png",
         github: "https://github.com/gabrielcamargogsilva/Projeto-API-Tabela-FIPE",
         links: [
@@ -76,7 +76,7 @@ const projetos = [
         ]
     },
     {
-        id: 7, 
+        id: 7,
         titulo: "Assistente Financeiro Inteligente com IA",
         descCurta: "Bot no Telegram integrado com IA e automação no Make para gestão financeira direto no Excel.",
         descLonga: "Desenvolvimento de um bot financeiro privado no Telegram integrado a uma Inteligência Artificial para gestão automatizada de despesas e receitas. O fluxo recebe entradas em linguagem natural (ex: 'gastei 35 reais com energia'), utiliza IA para classificar a transação (Entrada, Gasto Fixo ou Variável) e converte os dados para JSON. Através de roteamento e filtros avançados no Make, a automação identifica o mês e a categoria, registra as informações automaticamente em uma tabela do Excel e retorna uma mensagem de confirmação no chat.",
@@ -87,16 +87,16 @@ const projetos = [
         ]
     },
     {
-        id: 8, // Lembre-se de ajustar para o número correto na sua lista
+        id: 8,
         titulo: "Assistente de Finanças com CrewAI",
         descCurta: "Plataforma de gestão financeira impulsionada por agentes autônomos de Inteligência Artificial.",
         descLonga: "Um assistente financeiro inovador desenvolvido com arquitetura dividida. O core do projeto utiliza o framework CrewAI no Back-end com Python, orquestrando múltiplos agentes de Inteligência Artificial que atuam como especialistas para analisar dados, categorizar gastos e gerar insights financeiros personalizados. O Front-end consome essas inteligências, entregando uma interface amigável e interativa para o usuário final interagir com os agentes.",
-        tags: ["CrewAI", "Python", "Inteligência Artificial", "Front-end"],
+        tags: ["CrewAI", "Python", "Inteligência Artificial", "FastAPI", "REACT"],
         imagem: "assets/img/assistente-financas.png",
         links: [
             { label: "GitHub (Back-end/IA)", url: "https://github.com/gabrielcamargogsilva/assistente-de-financas", tipo: "github" },
             { label: "GitHub (Front-end)", url: "https://github.com/gabrielcamargogsilva/assistente-de-financas-front-end", tipo: "github" },
-            {label: "Ver Front-end", url: "https://assistente-de-financas-front-end.vercel.app/", tipo: "demo"}
+            { label: "Ver Front-end", url: "https://assistente-de-financas-front-end.vercel.app/", tipo: "demo" }
         ]
     }
 ];
@@ -127,7 +127,7 @@ function abrirModal(id) {
     document.getElementById('modal-titulo').innerText = p.titulo;
     document.getElementById('modal-desc-longa').innerText = p.descLonga;
     document.getElementById('modal-img').src = p.imagem;
-    
+
     // Gerar Tags
     const tagsContainer = document.getElementById('modal-tags');
     tagsContainer.innerHTML = p.tags.map(t => `<span class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-3 py-1 rounded-full border border-emerald-500/20">${t}</span>`).join('');
@@ -165,7 +165,7 @@ function fecharModal() {
     document.body.style.overflow = 'auto';
 }
 
-window.onclick = function(event) { if (event.target == modal) fecharModal(); }
+window.onclick = function (event) { if (event.target == modal) fecharModal(); }
 document.addEventListener('DOMContentLoaded', renderizarProjetos);
 
 
